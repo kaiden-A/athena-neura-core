@@ -35,6 +35,13 @@
     0%, 100% { opacity: 0.2; }
     50% { opacity: 0.8; }
   }
+
+  --animate-orbital-drift: orbital-drift 30s linear infinite;
+
+  @keyframes orbital-drift {
+    0% { transform: rotate(0deg) translateX(0) translateY(0); }
+    100% { transform: rotate(360deg) translateX(10px) translateY(5px); }
+  }
 }
 
 /* Base Styles & Custom Utilities */
@@ -85,5 +92,10 @@
   .hover-lift:hover {
     transform: translateY(-4px);
     transition: transform 0.2s ease;
+  }
+
+  /* Performance optimization for heavy animations */
+  .will-change-transform {
+    will-change: transform, opacity;
   }
 }
