@@ -23,6 +23,10 @@ function Siblings() {
     },
   };
 
+  const goToAthenaWebsite = () => {
+    window.location.href = "https://athena-guide.vercel.app/"
+  }
+
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 py-24 md:py-32 relative">
       {/* Vertical Decorative Line */}
@@ -85,6 +89,7 @@ function Siblings() {
               </li>
             </ul>
             <motion.button 
+              onClick={goToAthenaWebsite}
               whileTap={{ scale: 0.95 }}
               className="w-full py-3 sm:py-4 bg-white/5 border border-white/10 rounded-2xl font-bold text-white hover:bg-blue-500/20 hover:border-blue-500/50 transition-all"
             >

@@ -1,11 +1,16 @@
-
+"use client"
 
 function Header(){
+
+
+    const goToMainWebsite = () => {
+        window.location.href ="https://www.motionukict.com/"
+    }
 
     return(
         <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-space-void/90 backdrop-blur-xl supports-backdrop-filter:bg-space-void/70">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
-                <div className="flex items-center gap-1 sm:gap-2">
+                <div className="flex items-center gap-1 sm:gap-2" onClick={() => goToMainWebsite()}>
                     <span className="material-symbols-outlined text-primary text-2xl sm:text-3xl animate-pulse-glow">rocket_launch</span>
                     <span className="text-lg sm:text-xl font-black tracking-tighter text-white uppercase">Motion-U</span>
                 </div>
